@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    meta charset="UTF-8"
+    meta http-equiv="X-UA-Compatible" content="chrome=1"
+    title Railsyard CMS #{@title}
+    == stylesheet_link_tag "screen"
+    == stylesheet_link_tag "rainbow"
+    == javascript_include_tag "http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.1/jquery.min.js"
+    == javascript_include_tag "http://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/2.99/jquery.cycle.all.min.js"
+    == javascript_include_tag "highlight"
+    == javascript_include_tag "application"
+
+  body
+    #site
+      header#site-header
+        h2#logo== link_to "Railsyard CMS", "/"
+        p.subtitle Rails Content Management Framework
+        nav
+          ul
+            li== link_to "How to use it", "#guides"
+            li== link_to "Railsyard Plugins", "/plugins"
+            li== link_to "Github", "https://github.com/cantierecreativo/railsyard-backend"
+
+      #site-content== yield
+
+      footer#site-footer
+        .who
+          ' Railsyard is an open source project made in
+          == link_to "Cantiere Creativo", "http://cantierecreativo.net"
+        .copyright Copyright #{copyright_years(2010)}

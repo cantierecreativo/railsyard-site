@@ -1,0 +1,81 @@
+- @title = ""
+
+section#intro
+
+  ul#features
+    li
+      h3 Designed to get out of your way.
+      markdown:
+        Forget clumsy backend UI experiences filled with tons of settings and
+        complexity you didn't request.
+
+        With Railsyard you can finally craft a back-end that fits exactly your client's
+        mental model of how a website should be edited: not a single checkbox
+        more.
+
+    li
+      h3 Each website is different: so should be the backend.
+      markdown:
+        Someone had to stop this "pages-articles-and-comments" cliché. CMSs should be
+        able to easily handle any type of content, not just the standard cases.
+        Railsyard can build a backend for any model and relations you can think
+        of, in the same ~30 lines of code.
+
+    li
+      h3 100% Extensible and reusable
+      markdown:
+        The Railsyard core is and will always remain content-agnostic. Image galleries,
+        rich-text editing, automatic image resize, translations, data exporting,
+        authentication, authorization? Each of these things could be implemented in
+        thousands of different ways, based on the requirements of the project.
+
+        That's why we built them as plugins: use the ones we provide, or throw them
+        away, build something completely different and share it with the community.
+
+    li
+      h3 Built on top of production-ready, popular gems
+      markdown:
+        Rails and gems like CanCan, SimpleForm, Friendly Id, Dragonfly and Globalize
+        makes it already easy to build a backend in no time.
+
+        Railsyard refuses to reinvent the wheel again: is just a tiny layer above them.
+        This means less stuff to maintain for us, and less new stuff for you to learn.
+
+    li
+      h3 Rails 3.2+ compatible
+      markdown:
+        Railsyard is a mountable, isolated Rails 3 engine built from the ground up to
+        take advantage of all the latest Rails conventions, asset pipeline included.
+        This makes it easy to use it side by side with other engines, such as Spree.
+
+  #slideshow
+    nav
+      == link_to "Previous step", "#", class: "prev"
+      == link_to "Next step", "#", class: "next"
+
+    ul
+      li
+        .caption
+          markdown:
+            ### Step 1. Install it
+            Railsyard is just a simple gem that implements a Rails 3 mountable engine.
+            Add it to your `Gemfile` and then `bundle` it up.
+        pre data-src="new-rails.sh" data-language="bash"
+
+      li
+        .caption
+          markdown:
+            ### Step 2. Generate your Rails models
+            Just like the Rails `scaffold` CLI method, you can prepare a backend section for a certain model.
+        pre data-src="scaffold.sh" data-language="bash"
+
+      li
+        .caption
+          markdown:
+            ### Step 3. Customize the backend
+            Editors is where you can customize every aspect of your backend. Think
+            of editors as "super-smart views". For each model you can define which
+            fields to show and which to make editable.
+
+        pre data-src="editor.rb" data-language="ruby"
+

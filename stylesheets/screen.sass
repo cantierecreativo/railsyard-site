@@ -1,0 +1,201 @@
+@import "compass"
+
++global-reset
+
+$railsyard-color: #3d70c1
+$railsyard-secondary-color: #58595b
+
+body
+  font-family: "Helvetica Nueue", "Helvetica"
+  font-size: 13px
+  line-height: 18px
+  color: #222
+
+code
+  font-family: Monaco
+
+#site
+  width: 960px
+  margin: 0 auto
+
+  #site-header
+    margin-top: 30px
+    color: #123456
+
+    #logo
+      a
+        display: block
+        +replace-text("railsyard-logo.png")
+        max-width: 100%
+        height: 80px
+        background-size: contain
+        background-position: left center
+        margin-bottom: 15px
+
+    .subtitle
+      font-size: 20px
+      font-weight: bold
+      color: $railsyard-color
+
+    nav
+      margin-top: 20px
+      font-size: 15px
+
+      ul li
+        display: inline
+
+        &:after
+          content: " \2022"
+          color: $railsyard-color
+
+        &:last-child:after
+          content: ""
+
+        a
+          color: $railsyard-color
+          display: inline
+          text-decoration: none
+          text-transform: uppercase
+          font-weight: bold
+
+  #site-content
+    margin-top: 30px
+    margin-bottom: 30px
+    +clearfix
+
+    a
+      color: $railsyard-color
+      text-decoration: none
+      font-weight: bold
+
+    h1
+      font-size: 25px
+      line-height: 30px
+      margin-bottom: 20px
+      font-weight: bold
+
+    table
+      width: 100%
+      margin: 20px 0
+
+      th
+        font-weight: bold
+        font-size: 15px
+        border-bottom: 1px solid $railsyard-color
+        color: $railsyard-color
+
+      td
+        border-bottom: 1px solid $railsyard-secondary-color
+
+      td, th
+        padding: 10px
+
+      .plugin-dependent
+        width: 20%
+
+      .plugin-description
+        width: 40%
+
+    #slideshow
+      float: right
+      width: (960px - 45px) / 2 + 20px
+
+      ul
+
+        li
+          color: white
+          left: 0
+          right: 0
+
+          pre code
+            padding: 20px
+            line-height: 20px
+            font-family: Monaco
+
+          .caption
+            padding: 15px 20px
+            background-color: #333
+            line-height: 18px
+            margin-top: 1px
+            font-size: 14px
+
+            h3
+              font-size: 20px
+              font-weight: bold
+              margin-bottom: 10px
+
+      nav
+        +pie-clearfix
+        margin-bottom: 10px
+
+        a
+          width: 50%
+          float: left
+          background-color: #333
+          padding: 15px 0
+          text-align: center
+          color: white
+          text-decoration: none
+          font-weight: bold
+          text-transform: uppercase
+
+          &:hover
+            background-color: #222
+
+          &.next
+            margin-left: -1px
+            border-left: 1px solid white
+
+            &:after
+              content: " >"
+
+          &.prev:before
+            content: "< "
+
+    ul#features
+      width: (960px - 45px) / 2 - 20px
+      float: left
+
+      li
+        margin-bottom: 20px
+
+        h3
+          font-size: 20px
+          line-height: 22px
+          margin-bottom: 5px
+          font-weight: bold
+
+        p
+          margin-bottom: 8px
+
+        &:first-child
+          margin-bottom: 40px
+
+          h3
+            font-size: 30px
+            line-height: 30px
+            font-weight: bold
+            margin-bottom: 15px
+
+          p
+            margin-bottom: 15px
+            font-size: 18px
+            line-height: 22px
+
+  #site-footer
+    background-color: $railsyard-color
+    padding: 20px
+    font-size: 15px
+    color: white
+    +clearfix
+
+    a
+      color: white
+      font-weight: bold
+      text-decoration: none
+
+    .who
+      float: left
+
+    .copyright
+      float: right

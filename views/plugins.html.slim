@@ -1,0 +1,55 @@
+- @title = " - Plugins database"
+
+h1 Railsyard Plugins Database
+
+' The following is a list of all the availables Railsyard plugins.
+
+table
+  thead
+    tr
+      th.plugin-name Name
+      th.plugin-type Type
+      th.plugin-state State
+      th.plugin-dependent Dependent on
+      th.plugin-description Description
+  tbody
+    tr
+      td == link_to "railsyard-dragonfly", "https://github.com/cantierecreativo/railsyard-dragonfly/"
+      td Custom field type
+      td Beta
+      td -
+      td Makes it trivial to manage Dragonfly model fields through the Railsyard backend.
+    tr
+      td == link_to "railsyard-gallery", "https://github.com/cantierecreativo/railsyard-gallery"
+      td Model
+      td Beta
+      td railsyard-dragonfly
+      td
+        ' Lets you create image models complete with description and alternative text, and associate
+        ' any model with one/many single image, and one/many image gallery.
+    tr
+      td == link_to "railsyard-authentication-devise", "https://github.com/cantierecreativo/railsyard-authentication-devise"
+      td Authentication adapter
+      td Beta
+      td -
+      td Makes it trivial to manage Railsyard authentication using the Devise authentication system
+    tr
+      td == link_to "railsyard-wysihtml5", "https://github.com/cantierecreativo/railsyard-wysihtml5"
+      td Custom field type
+      td Beta
+      td -
+      td Lets you use a (customizable) wysiHTML5 editor for any of your textual field.
+    tr
+      td == link_to "railsyard-analytics", "https://github.com/cantierecreativo/railsyard-analytics"
+      td Dashboard widgets
+      td Beta
+      td -
+      td Lets you add different, customizable Analytics widgets (both pie-chart and line-charts) using Google Charts Tools
+    tr
+      td == link_to "railsyard-authorization-cancan", "https://github.com/cantierecreativo/railsyard-authorization-cancan"
+      td Authorization adapter
+      td Beta
+      td -
+      td Let's you use a CanCan ability class to manage your Railsyard backend authorizations.
+
+
